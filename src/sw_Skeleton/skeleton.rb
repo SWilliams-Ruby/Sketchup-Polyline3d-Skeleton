@@ -47,7 +47,7 @@ module SW
     end
       
     # Given a group, replace every edge in the group with
-    # a scaled and exploded copy of the referenced component
+    # a scaled and exploded copy of the polyline3d component
     # definition. 
     #
     def self.convert_edges(grp, component_def)
