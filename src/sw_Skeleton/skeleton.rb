@@ -10,7 +10,8 @@
 # Usage :
 # select a group
 # in the (right click) context menu choose Create Skeleton
-# to change the material, select the skeleton and in the (right clkick) context menu choose Paint Skeleton
+# to change the material, select the skeleton and in the 
+# (right clkick) context menu choose Paint Skeleton
 
 
 module SW
