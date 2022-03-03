@@ -42,7 +42,7 @@ module SW
           end
 
           model.commit_operation
-          sel.clear
+          # sel.clear
           
         # rescue => exception
           # model.abort_operation
