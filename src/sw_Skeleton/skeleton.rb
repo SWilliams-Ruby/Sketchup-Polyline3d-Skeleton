@@ -32,8 +32,12 @@ module SW
           # load the polyline definition
           @polyline_def = load_polyline() unless @polyline_def.is_a?(Sketchup::ComponentInstance)
 
+          # make unique !groups are supposed to be unique anyway
+          grp = sel[0]
+          grp.make_unique
+          
           # convert edges to polylines
-          convert_edges(sel[0], @polyline_def)
+          convert_edges(grp, @polyline_def)
 
           # remove the polyline definition if possible
           if Sketchup.version.to_i > 17
@@ -110,7 +114,7 @@ module SW
     end
     
     def self.paint_skeleton()
-      model = Sketchup.active_model.model.materials.current
+      model = Sketchup.active_model
       sel = model.selection
       if sel.size != 1 || !sel[0].is_a?(Sketchup::Group)
         UI.messagebox 'Please select a group' 
